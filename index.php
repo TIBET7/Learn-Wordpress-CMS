@@ -503,5 +503,38 @@
             </div>
         </div>
 <?php
+
+//Разница м/у событием и фильтром в том, что фильтр что-то возвращает.
+
+//Событие
+/* function print_hello($text, $name) {
+    echo 'Hello, world!'. ' ' . $text . ' ' . $name;
+};
+
+add_action('my_hook', 'print_hello', 15, 2);
+// 15 - порядок отображения функции(по умолчанию - 10); 2 - кол-во аргументов в функции print_hello; если в функции один аргумент, то прописывать его не надо, т.к. 1 - значение данного аргумента по умолчанию
+
+do_action('my_hook', 'Dear customer', 'Ivan');
+//'Dear customer', 'Ivan' - параметры ф-ции print_hello;
+remove_action()*/
+
+
+/* //Фильтр
+function my_filter_function($str) {
+    return 'Hello ' . $str . '<br/>';
+}
+    
+add_filter('my_filter', 'my_filter_function', 15);
+
+echo apply_filters( 'my_filter', 'World' );
+
+remove_filter('my_filter', 'my_filter_function', 15 );
+
+echo apply_filters( 'my_filter', 'World' );
+
+?> */
+
+<?php
     get_footer();
-?>      
+?>
+
